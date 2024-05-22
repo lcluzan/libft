@@ -6,7 +6,16 @@
 /*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:49:23 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/20 18:35:05 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/05/22 14:19:26 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
