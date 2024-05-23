@@ -6,7 +6,13 @@
 /*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:49:09 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/20 18:35:05 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/05/23 16:08:47 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
+
+int	ft_isprint(int c)
+{
+	return (c >= ' ' && c <= '~');
+}
