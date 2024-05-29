@@ -6,12 +6,11 @@
 /*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 12:23:16 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/23 16:20:30 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/05/29 14:42:30 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
-
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
