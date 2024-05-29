@@ -6,16 +6,16 @@
 /*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 16:41:54 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/23 16:44:46 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/05/29 15:19:10 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char *ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	unsigned int i;
-	unsigned int j;
+	unsigned int	i;
+	unsigned int	j;
 
 	if (to_find[0] == '\0')
 		return ((char *)str);
