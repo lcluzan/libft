@@ -6,13 +6,13 @@
 /*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 16:31:46 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/23 16:48:06 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/05/29 15:20:44 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (ft_isupper(c))
 		return (c + 32);
