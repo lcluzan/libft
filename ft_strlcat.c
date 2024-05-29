@@ -6,16 +6,16 @@
 /*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:49:01 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/23 16:14:14 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/05/29 15:10:54 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *s1, const char *s2, size_t n)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (s1[i] != '\0' && i < n)
