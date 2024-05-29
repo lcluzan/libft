@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nouillebobby <nouillebobby@student.42.f    +#+  +:+       +#+        */
+/*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 13:48:38 by nouillebobb       #+#    #+#             */
-/*   Updated: 2024/05/28 13:50:16 by nouillebobb      ###   ########.fr       */
+/*   Updated: 2024/05/29 15:03:53 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-    size_t	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
