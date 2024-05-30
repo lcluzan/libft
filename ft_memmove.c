@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nouillebobby <nouillebobby@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:21:55 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/29 15:01:36 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/05/30 11:01:02 by nouillebobb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -24,12 +24,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (d < s)
 	{
 		while (i++ < len)
-		d[i] = s[i];
+			d[i] = s[i];
 	}
 	else
 	{
 		while (len-- > 0)
-		d[len] = s[len];
+			d[len] = s[len];
 	}
 	return (dst);
 }

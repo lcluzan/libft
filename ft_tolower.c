@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nouillebobby <nouillebobby@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 16:31:46 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/29 15:20:44 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/05/30 11:10:13 by nouillebobb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isupper(char c)
+{
+	return (c >= 'A' && c <= 'Z');
+}
 
 int	ft_tolower(int c)
 {
