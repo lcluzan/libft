@@ -6,7 +6,7 @@
 /*   By: nouillebobby <nouillebobby@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 16:17:33 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/30 11:06:49 by nouillebobb      ###   ########.fr       */
+/*   Updated: 2024/05/30 18:27:03 by nouillebobb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
-char	*ft_strmapi(char const *s, char (*f)(size_t, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-void	ft_striteri(char *s, void (*f)(size_t, char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 /* Bonus */
 typedef struct s_list
