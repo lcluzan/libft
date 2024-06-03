@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nouillebobby <nouillebobby@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:49:01 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/05/29 15:10:54 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/06/03 19:43:39 by nouillebobb      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,24 @@
 
 size_t	ft_strlcat(char *s1, const char *s2, size_t n)
 {
+	size_t	dstlen;
+	size_t	scrlen;
 	size_t	i;
-	size_t	j;
 
+	dstlen = ft_strlen(s1);
+	scrlen = 0;
+	while (s1[scrlen])
+		scrlen++;
 	i = 0;
-	while (s1[i] != '\0' && i < n)
-		i++;
-	j = i;
-	while (s2[i - j] != '\0' && i < n - 1)
+	while (s2[i] && (i + scrlen + 1) < n)
 	{
-		s1[i] = s2[i - j];
+		s1[scrlen + i] = s2[i];
 		i++;
 	}
-	if (j < n)
-		s1[i] = '\0';
-	return (j + ft_strlen(s2));
+	if (i < n)
+		s1[scrlen + i] = '\0';
+	if (n <= dstlen)
+		return (ft_strlen(s2) + n);
+	else
+		return (ft_strlen(s2) + dstlen);
 }
