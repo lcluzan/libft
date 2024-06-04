@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nouillebobby <nouillebobby@student.42.f    +#+  +:+       +#+        */
+/*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 16:37:04 by lcluzan           #+#    #+#             */
-/*   Updated: 2024/06/03 19:32:39 by nouillebobb      ###   ########.fr       */
+/*   Updated: 2024/06/04 10:27:58 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//ceci est un test//
 
 #include "libft.h"
 
