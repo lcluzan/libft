@@ -6,11 +6,24 @@
 /*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 13:56:15 by nouillebobb       #+#    #+#             */
-/*   Updated: 2024/06/05 11:01:16 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/06/05 11:46:47 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void    free_split(char **str)
+{
+	int	i;
+
+	i = 0;
+	if (str)
+	{
+		while (str[i])
+			free(str[i++]);
+		free(str);
+	}
+}
 
 static size_t	count_words(char const *s, char c)
 {
@@ -41,7 +54,7 @@ static void	fill_tab(char *new, char const *s, char c)
 	new[i] = '\0';
 }
 
-static void	set_mem(char **tab, char const *s, char c)
+static int	mem_tab(char **tab, char const *s, char c)
 {
 	size_t	count;
 	size_t	str;
@@ -58,15 +71,15 @@ static void	set_mem(char **tab, char const *s, char c)
 		{
 			tab[i] = malloc(sizeof(char) * (count + 1));
 			if (!tab[i])
-				return ;
-			fill_tab(tab[i], (s + str), c);
-			i++;
+				return (free_split(tab), 1);
+			fill_tab(tab[i++], (s + str), c);
 			str = str + count;
 		}
 		else
 			str++;
 	}
 	tab[i] = 0;
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -78,6 +91,7 @@ char	**ft_split(char const *s, char c)
 	tab = malloc(sizeof(char *) * (words + 1));
 	if (!tab)
 		return (NULL);
-	set_mem(tab, s, c);
+	if (mem_tab(tab, s, c) != 0)
+		return (NULL);
 	return (tab);
 }
