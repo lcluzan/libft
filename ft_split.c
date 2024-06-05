@@ -6,7 +6,7 @@
 /*   By: lcluzan <lcluzan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 13:56:15 by nouillebobb       #+#    #+#             */
-/*   Updated: 2024/05/29 15:06:08 by lcluzan          ###   ########.fr       */
+/*   Updated: 2024/06/05 11:01:16 by lcluzan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,27 +44,27 @@ static void	fill_tab(char *new, char const *s, char c)
 static void	set_mem(char **tab, char const *s, char c)
 {
 	size_t	count;
-	size_t	index;
+	size_t	str;
 	size_t	i;
 
-	index = 0;
+	str = 0;
 	i = 0;
-	while (s[index])
+	while (s[str])
 	{
 		count = 0;
-		while (s[index + count] && s[index + count] != c)
+		while (s[str + count] && s[str + count] != c)
 			count++;
 		if (count > 0)
 		{
 			tab[i] = malloc(sizeof(char) * (count + 1));
 			if (!tab[i])
 				return ;
-			fill_tab(tab[i], (s + index), c);
+			fill_tab(tab[i], (s + str), c);
 			i++;
-			index = index + count;
+			str = str + count;
 		}
 		else
-			index++;
+			str++;
 	}
 	tab[i] = 0;
 }
